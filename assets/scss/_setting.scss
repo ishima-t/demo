@@ -1,0 +1,76 @@
+//文字サイズと色
+$base_font_size: 1.6rem;
+$base_font_size_pc: 1.4rem;
+
+//色
+$color_corporate: #007fc3;
+$color_light_corporate: #1897db;
+$color_black: #333;
+$color_gray: #9E9E9E;
+$color_light_gray: #E2E2E2;
+$color_background: #E6F5F5;
+$color_background_sub: #F8F8F8;
+$color_event: #CB7A9F;
+$color_hall: #DE886B;
+$color_art: #69A563;
+$color_cinema: #9A8BB1;
+$color_caution: #CB2A2A;
+$color_caution_sub: #EFBEBE;
+
+//幅
+$contents_width: 960px;
+$contents_min_width: 800px;
+
+//フォント
+@mixin font_jp {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+@mixin font_jp_serif {
+  font-family: "Noto Serif JP", serif;
+}
+@mixin font_en {
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.6;
+}
+@mixin font_en_oswald {
+  font-family: "Oswald", sans-serif;
+  line-height: 1.6;
+}
+
+//ボタン、角丸、シャドウ
+@mixin button($width:240px, $height:48px, $border-radius:24px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height:  $height;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: $border-radius;
+  background-color: $color_corporate;
+  &:hover {
+    opacity: 1;
+    background-color: $color_light_corporate;
+  }
+}
+@mixin button-second($width:110px, $height:40px, $border-radius:20px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height:  $height;
+  margin: 0 auto;
+  border: 1px solid $color_gray;
+  border-radius: $border-radius;
+  &:hover {
+    opacity: 1;
+  }
+}
+@mixin border-radius($px:4px) {
+  border-radius: $px;
+}
+@mixin box-shadow {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
